@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Isometra&display=swap'); /*importação da fonte*/
+
+
+#titulo{
+    font-size: 8vh;
+    text-align: center;
+  font-family: "Isometra", serif;  /*atribuição da fonte */
+}
+
+
+#logodoIF{
+    display: flex;
+    margin: 0 auto;
+}
+
+body{
+    border: 80px solid rgb(39, 131, 52);
+    padding: 280px  /*padding pra borda nao colar no conteudo*/
+}
