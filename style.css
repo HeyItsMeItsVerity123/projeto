@@ -6,6 +6,10 @@
   font-family: "Isometra", serif;  /*atribuição da fonte */
 }
 
+#logodoIF{
+    width: 35vh;
+    height: 45vh;
+}
 
 
 .main{
@@ -17,11 +21,12 @@ flex-direction: column;
 
 #inputnome{
     font-size: 3vh;
-    border-radius: 1rem;
+    
 }
 #labelNome{
     font-size: 2vh;
     font-weight: bold;
+
 }
 
 #botaocomecar{
@@ -29,10 +34,12 @@ flex-direction: column;
 height: 15vh;
 width: 39vh;
 font-size: 30px;
-background-color: #9cf3bd;
 border-radius: 1rem;
 }
 
-#background{
-  color: #9cf3bd;
+
+body {
+        min-height: 90vh;
+
+    border: 29px solid #2e7c27; /* Altere a espessura e a cor conforme desejar */
 }
