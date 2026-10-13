@@ -2,18 +2,31 @@
 
 
 #titulo{
-    font-size: 8vh;
-    text-align: center;
+    font-size: 6vh;
   font-family: "Isometra", serif;  /*atribuição da fonte */
 }
 
 
-#logodoIF{
-    display: flex;
-    margin: 0 auto;
+
+.main{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
 }
 
-body{
-    border: 80px solid rgb(39, 131, 52);
-    padding: 280px  /*padding pra borda nao colar no conteudo*/
+#inputnome{
+    font-size: 3vh;
+}
+#labelNome{
+    font-size: 2vh;
+    font-weight: bold;
+
+}
+
+#botaocomecar{
+
+height: 15vh;
+width: 39vh;
+font-size: 30px;
 }
