@@ -1,26 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Codificação: garante acentos corretos -->
     <meta charset="UTF-8">
+    <!-- Responsividade: essencial para celular -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz do IF</title>
+    <!-- Título: aparece na aba e no Google -->
+    <title>Jogo Quiz do Gabrow</title>
+    <!-- Descrição: o texto abaixo do título nos resultados de busca -->
+    <meta name="description" content="Pães, bolos e cafés artesanais feitos todos os dias. Encomendas pelo WhatsApp e entrega no bairro.">
+    <!-- Compartilhamento no WhatsApp e nas redes sociais -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Padaria Pão Quente — pães artesanais em Niterói">
+    <meta property="og:description" content="Pães, bolos e cafés artesanais feitos todos os dias. Encomendas pelo WhatsApp e entrega no bairro.">
+    <!-- Ícone da aba, feito com um emoji -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D&#39;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#39;%20viewBox%3D&#39;0%200%20100%20100&#39;%3E%3Ctext%20y%3D&#39;.9em&#39;%20font-size%3D&#39;90&#39;%3E%F0%9F%A5%96%3C%2Ftext%3E%3C%2Fsvg%3E">
+    <!-- Estilos: quando o site crescer, mova para um arquivo style.css -->
     <link rel="stylesheet" href="style.css">
+    <script src="quiz.js"></script>
 </head>
-
 <body>
-    <div class="main">
+    <header>
+        <div class="container">
+            <a class="marca" href="#">Quiz do Gabrow</a>
+        </div>
+    </header>
 
-    <h1 id="titulo"> Quiz Do </h1>
-    <img src="IFET_logo.PNG" id="logodoIF"> <br>
+    <main>
+        <section class="destaque">
+            <div class="container">
+                <h1 style="color: black;">Quiz Do Gabrow</h1>
+                <p style="color: brown;"> Venha testar seu conhecimento</p>
+            </div>
+        </section>
+
+                  
+            <div class="button" onclick="mudarEstado('servicos')" style="margin-left: 33%;">
+                <a href="#">Começar o quiz!</a>
+            </div>                
     
-    <form id="form">
 
-<label for="number" id="labelNome">Insira o seu nome</label> <br>
-<input type="text" id="inputnome">  <br>
-<button id="botaocomecar" type="button"> Clique aqui para começar!</button>
+        <section id="servicos">
+            <div class="container">
+                <h2>Perguntas</h2>
+                <div class="grade">
+                    <article class="cartao">
+                        <h3 id="title1"> </h3>
+                        <input type="radio" id="opcao-1" name="question1">
+                        <label id="opcao1" for="opcao-1"></label><br>
 
-    </form>
+                        <input type="radio" id="opcao-2" name="question1">
+                        <label id="opcao2" for="opcao-2"></label><br>
 
-    </div>
+                        <input type="radio" id="opcao-3" name="question1">
+                        <label id="opcao3" for="opcao-3"></label><br>
+
+                        <input type="radio" id="opcao-4" name="question1">
+                        <label id="opcao4" for="opcao-4"></label>
+                    </article>
+
+                    <article class="cartao">
+                        <h3 id="title2"> </h3>
+                        <input type="radio" id="opcao-5" name="question2">
+                        <label id="opcao5" for="opcao-5"></label><br>
+
+                        <input type="radio" id="opcao-6" name="question2">
+                        <label id="opcao6" for="opcao-6"></label><br>
+
+                        <input type="radio" id="opcao-7" name="question2">
+                        <label id="opcao7" for="opcao-7"></label><br>
+
+                        <input type="radio" id="opcao-8" name="question2">
+                        <label id="opcao8" for="opcao-8"></label>
+                    </article>
+
+                    <article class="cartao">
+                        <h3 id="title3"> </h3>
+                        <input type="radio" id="opcao-9" name="question3">
+                        <label id="opcao9" for="opcao-9"></label><br>
+
+                        <input type="radio" id="opcao-10" name="question3">
+                        <label id="opcao10" for="opcao-10"></label><br>
+
+                        <input type="radio" id="opcao-11" name="question3">
+                        <label id="opcao11" for="opcao-11"></label><br>
+
+                        <input type="radio" id="opcao-12" name="question3">
+                        <label id="opcao12" for="opcao-12"></label>
+                    </article>
+                    <br>    
+                </div>
+            </div>
+
+            <div class="container">                
+                <div class="">
+                    <a href="#">Finalizar o quiz!</a>
+                </div>                
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Quiz do doidão</p>
+    </footer>
 </body>
 </html>
