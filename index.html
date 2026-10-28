@@ -1,48 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <!-- Codificação: garante acentos corretos -->
+   
     <meta charset="UTF-8">
-    <!-- Responsividade: essencial para celular -->
+  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título: aparece na aba e no Google -->
-    <title>Jogo Quiz do Gabrow</title>
-    <!-- Descrição: o texto abaixo do título nos resultados de busca -->
-    <meta name="description" content="Pães, bolos e cafés artesanais feitos todos os dias. Encomendas pelo WhatsApp e entrega no bairro.">
-    <!-- Compartilhamento no WhatsApp e nas redes sociais -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Padaria Pão Quente — pães artesanais em Niterói">
-    <meta property="og:description" content="Pães, bolos e cafés artesanais feitos todos os dias. Encomendas pelo WhatsApp e entrega no bairro.">
-    <!-- Ícone da aba, feito com um emoji -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D&#39;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#39;%20viewBox%3D&#39;0%200%20100%20100&#39;%3E%3Ctext%20y%3D&#39;.9em&#39;%20font-size%3D&#39;90&#39;%3E%F0%9F%A5%96%3C%2Ftext%3E%3C%2Fsvg%3E">
-    <!-- Estilos: quando o site crescer, mova para um arquivo style.css -->
+  
+    <title>Quiz de Futebol</title>
+   
     <link rel="stylesheet" href="style.css">
-    <script src="quiz.js"></script>
+    <script src="script.js"></script>
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <a class="marca" href="#">Quiz do Gabrow</a>
-        </div>
-    </header>
 
     <main>
-        <section class="destaque">
+        <section class="areaTitulo">
             <div class="container">
-                <h1 style="color: black;">Quiz Do Gabrow</h1>
-                <p style="color: brown;"> Venha testar seu conhecimento</p>
+                <h1 style="color: black;">⚽Quiz Do Futebol⚽</h1>
+                <p style="color: rgb(0, 109, 45);"> Venha testar seus conhecimentos futebolísticos!</p>
             </div>
         </section>
-
-                  
-            <div class="button" onclick="mudarEstado('servicos')" style="margin-left: 33%;">
-                <a href="#">Começar o quiz!</a>
-            </div>                
-    
-
-        <section id="servicos">
+          <div class="button" onclick="mudarEstado('sectionPerguntas')" style="margin-left: 33%;">
+            <a href="#">Começar o quiz!</a>
+          </div>
+        <section id="sectionPerguntas" class="sectionPerguntas">
             <div class="container">
-                <h2>Perguntas</h2>
+                <h2>Perguntas...</h2>
                 <div class="grade">
                     <article class="cartao">
                         <h3 id="title1"> </h3>
@@ -88,21 +73,127 @@
                         <input type="radio" id="opcao-12" name="question3">
                         <label id="opcao12" for="opcao-12"></label>
                     </article>
-                    <br>    
+
+                    <article class="cartao">
+                        <h3 id="title4"> </h3>
+                        <input type="radio" id="opcao-13" name="question4">
+                        <label id="opcao13" for="opcao-13"></label><br>
+
+                        <input type="radio" id="opcao-14" name="question4">
+                        <label id="opcao14" for="opcao-14"></label><br>
+
+                        <input type="radio" id="opcao-15" name="question4">
+                        <label id="opcao15" for="opcao-15"></label><br>
+
+                        <input type="radio" id="opcao-16" name="question4">
+                        <label id="opcao16" for="opcao-16"></label>
+                    </article>
+
+                    <article class="cartao">
+                        <h3 id="title5"> </h3>
+                        <input type="radio" id="opcao-17" name="question5">
+                        <label id="opcao17" for="opcao-17"></label><br>
+
+                        <input type="radio" id="opcao-18" name="question5">
+                        <label id="opcao18" for="opcao-18"></label><br>
+
+                        <input type="radio" id="opcao-19" name="question5">
+                        <label id="opcao19" for="opcao-19"></label><br>
+
+                        <input type="radio" id="opcao-20" name="question5">
+                        <label id="opcao20" for="opcao-20"></label>
+                    </article>
+
+                    <article class="cartao">
+                        <h3 id="title6"> </h3>
+                        <input type="radio" id="opcao-21" name="question6">
+                        <label id="opcao21" for="opcao-21"></label><br>
+
+                        <input type="radio" id="opcao-22" name="question6">
+                        <label id="opcao22" for="opcao-22"></label><br>
+
+                        <input type="radio" id="opcao-23" name="question6">
+                        <label id="opcao23" for="opcao-23"></label><br>
+
+                        <input type="radio" id="opcao-24" name="question6">
+                        <label id="opcao24" for="opcao-24"></label>
+                    </article>
+
+                    <article class="cartao">
+                        <h3 id="title7"> </h3>
+                        <input type="radio" id="opcao-25" name="question7">
+                        <label id="opcao25" for="opcao-25"></label><br>
+
+                        <input type="radio" id="opcao-26" name="question7">
+                        <label id="opcao26" for="opcao-26"></label><br>
+
+                        <input type="radio" id="opcao-27" name="question7">
+                        <label id="opcao27" for="opcao-27"></label><br>
+
+                        <input type="radio" id="opcao-28" name="question7">
+                        <label id="opcao28" for="opcao-28"></label>
+                    </article>
+
+                    <article class="cartao">
+                        <h3 id="title8"> </h3>
+                        <input type="radio" id="opcao-29" name="question8">
+                        <label id="opcao29" for="opcao-29"></label><br>
+
+                        <input type="radio" id="opcao-30" name="question8">
+                        <label id="opcao30" for="opcao-30"></label><br>
+
+                        <input type="radio" id="opcao-31" name="question8">
+                        <label id="opcao31" for="opcao-31"></label><br>
+
+                        <input type="radio" id="opcao-32" name="question8">
+                        <label id="opcao32" for="opcao-32"></label>
+                    </article>
+
+                    <article class="cartao">
+                        <h3 id="title9"> </h3>
+                        <input type="radio" id="opcao-33" name="question9">
+                        <label id="opcao33" for="opcao-33"></label><br>
+
+                        <input type="radio" id="opcao-34" name="question9">
+                        <label id="opcao34" for="opcao-34"></label><br>
+
+                        <input type="radio" id="opcao-35" name="question9">
+                        <label id="opcao35" for="opcao-35"></label><br>
+
+                        <input type="radio" id="opcao-36" name="question9">
+                        <label id="opcao36" for="opcao-36"></label>
+                    </article>
+
+                    <article class="cartao">
+                        <h3 id="title10"> </h3>
+                        <input type="radio" id="opcao-37" name="question10">
+                        <label id="opcao37" for="opcao-37"></label><br>
+
+                        <input type="radio" id="opcao-38" name="question10">
+                        <label id="opcao38" for="opcao-38"></label><br>
+
+                        <input type="radio" id="opcao-39" name="question10">
+                        <label id="opcao39" for="opcao-39"></label><br>
+
+                        <input type="radio" id="opcao-40" name="question10">
+                        <label id="opcao40" for="opcao-40"></label>
+                    </article>
+                    <br>
                 </div>
             </div>
 
-            <div class="container">                
+            <div class="container">
                 <div class="">
                     <a href="#">Finalizar o quiz!</a>
-                </div>                
+                </div>
             </div>
         </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2026 Quiz do doidão</p>
+        <p>&copy; 2026 Quiz Gabrow e Aguiar XD</p>
     </footer>
 </body>
+
 </html>
