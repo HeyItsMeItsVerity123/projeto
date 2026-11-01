@@ -22,42 +22,42 @@
                 <p style="color: rgb(0, 109, 45);"> Venha testar seus conhecimentos futebolísticos!</p>
             </div>
         </section>
-          <div class="button" onclick="mudarEstado('sectionPerguntas')" style="margin-left: 33%;">
+          <div class="button" onclick="mudarEstado('sectionPerguntas')" style="margin-left: 27%;">
             <a href="#">Começar o quiz!</a>
           </div>
         <section id="sectionPerguntas" class="sectionPerguntas">
             <div class="container">
                 <h2>Perguntas...</h2>
                 <div class="grade">
-                    <article class="cartao">
+                    <span class="cartao" onclick="pegaClickGamer('question1')">
                         <h3 id="title1"> </h3>
+                        <input type="radio" id="opcao-0" name="question1" >
+                        <label id="opcao1" for="opcao-0"></label><br>
+
                         <input type="radio" id="opcao-1" name="question1">
-                        <label id="opcao1" for="opcao-1"></label><br>
+                        <label id="opcao2" for="opcao-1"></label><br>
 
                         <input type="radio" id="opcao-2" name="question1">
-                        <label id="opcao2" for="opcao-2"></label><br>
+                        <label id="opcao3" for="opcao-2"></label><br>
 
                         <input type="radio" id="opcao-3" name="question1">
-                        <label id="opcao3" for="opcao-3"></label><br>
+                        <label id="opcao4" for="opcao-3"></label>
+                    </span>
 
-                        <input type="radio" id="opcao-4" name="question1">
-                        <label id="opcao4" for="opcao-4"></label>
-                    </article>
-
-                    <article class="cartao">
+                    <span class="cartao" onclick="pegaClickGamer('question2')">
                         <h3 id="title2"> </h3>
-                        <input type="radio" id="opcao-5" name="question2">
-                        <label id="opcao5" for="opcao-5"></label><br>
+                        <input type="radio" id="opcao-0" name="question2">
+                        <label id="opcao5" for="opcao-0"></label><br>
 
-                        <input type="radio" id="opcao-6" name="question2">
-                        <label id="opcao6" for="opcao-6"></label><br>
+                        <input type="radio" id="opcao-1" name="question2">
+                        <label id="opcao6" for="opcao-1"></label><br>
 
-                        <input type="radio" id="opcao-7" name="question2">
-                        <label id="opcao7" for="opcao-7"></label><br>
+                        <input type="radio" id="opcao-2" name="question2">
+                        <label id="opcao7" for="opcao-2"></label><br>
 
-                        <input type="radio" id="opcao-8" name="question2">
-                        <label id="opcao8" for="opcao-8"></label>
-                    </article>
+                        <input type="radio" id="opcao-3" name="question2">
+                        <label id="opcao8" for="opcao-3"></label>
+                    </span>
 
                     <article class="cartao">
                         <h3 id="title3"> </h3>
@@ -183,9 +183,9 @@
             </div>
 
             <div class="container">
-                <div class="">
-                    <a href="#">Finalizar o quiz!</a>
-                </div>
+                <button onclick="finalizarJogo()">
+                    <b>TERMINAR o quiz!</b>
+                </button>
             </div>
         </section>
 
