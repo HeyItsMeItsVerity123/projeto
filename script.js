@@ -204,7 +204,43 @@ function buildQuestion() {
 //     }
 // }
 
-var showQuestions = false;
+function verificarRadioSelecionado(nameInput) {
+  const newQuery = 'input[name="' + nameInput + '"]';
+  const radios = document.querySelectorAll(newQuery);
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      return radio.id; // retorna o id do rádio selecionado
+    }
+  }
+  return null; // se nenhum estiver selecionado
+}
+
+function pegaClickGamer(nameInput) {
+    const selecionado = verificarRadioSelecionado(nameInput);
+    const position = nameInput.split('')[8] - 1;
+
+    if (selecionado) {
+        console.log("Selecionado:", selecionado.split('-')[1]);
+        respostaGamer[parseInt(position)] = selecionado.split('-')[1];
+        console.log('respostaGamer: ', respostaGamer)
+    }
+}
+
+function finalizarJogo() {
+    let cont = 0;
+    for(const resp of respostaGamer) if(resp < 0) cont++;
+    
+    
+    if(respostaGamer.find((element) => element < 0)) {        
+        alert('OPS! vc precisa responder todas as perguntas \n respostas faltantes: ' + cont );           
+    } else {
+        alert('Fim de jogo!')
+    }
+}
+
+const respostasCertas = [1,3,2,1,2,0,2,1,2,2];
+var respostaGamer = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1];
 
 const quiz_data = {
     futebol: {
