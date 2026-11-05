@@ -12,7 +12,7 @@ function mudarEstado(el) {  //essa é a função que faz o quiz aparecer, se na 
     buildQuestion();
 }
   
-function buildQuestion() {                 
+function buildQuestion() {        //escreve as perguntas depois de clicar no botão, o comando que faz essa função acontecer esta no final da que ativa quando clica no botao começar quiz          
     const questoes = quiz_data.futebol.questions;
 
     for (let i = 0; i < questoes.length; i++) {
