@@ -2,15 +2,11 @@
 <html lang="pt-BR">
 
 <head>
-   
     <meta charset="UTF-8">
-  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
     <title>Quiz de Futebol</title>
-   
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -18,169 +14,182 @@
     <main>
         <section class="areaTitulo">
             <div class="container">
-                <h1 style="color: black;">⚽Quiz Do Futebol⚽</h1>
-                <p style="color: rgb(0, 109, 45);"> Venha testar seus conhecimentos futebolísticos!</p>
+                <h1 style="color: black;">⚽ Quiz Do Futebol ⚽</h1>
+                <p style="color: rgb(0, 109, 45);">Venha testar seus conhecimentos futebolísticos!</p>
             </div>
         </section>
         
-      <div class="button-container">
-    <button class="btn-start" onclick="mudarEstado('sectionPerguntas')">
-        Começar o quiz!
-    </button>
-</div>
-        <section id="sectionPerguntas" class="sectionPerguntas">
+        <div class="button-container">
+            <button class="btn-start" onclick="mudarEstado('sectionPerguntas')">
+                Começar o quiz!
+            </button>
+        </div>
+
+        <section id="sectionPerguntas" class="sectionPerguntas" style="display: none;">
             <div class="container">
                 <h2>Perguntas...</h2>
                 <div class="grade">
-                    <span class="cartao" onclick="pegaClickGamer('question1')">
-                        <h3 id="title1"> </h3>
-                        <input type="radio" id="opcao-0" name="question1" >
-                        <label id="opcao1" for="opcao-0"></label><br>
-
-                        <input type="radio" id="opcao-1" name="question1">
-                        <label id="opcao2" for="opcao-1"></label><br>
-
-                        <input type="radio" id="opcao-2" name="question1">
-                        <label id="opcao3" for="opcao-2"></label><br>
-
-                        <input type="radio" id="opcao-3" name="question1">
-                        <label id="opcao4" for="opcao-3"></label>
-                    </span>
-
-                    <span class="cartao" onclick="pegaClickGamer('question2')">
-                        <h3 id="title2"> </h3>
-                        <input type="radio" id="opcao-0" name="question2">
-                        <label id="opcao5" for="opcao-0"></label><br>
-
-                        <input type="radio" id="opcao-1" name="question2">
-                        <label id="opcao6" for="opcao-1"></label><br>
-
-                        <input type="radio" id="opcao-2" name="question2">
-                        <label id="opcao7" for="opcao-2"></label><br>
-
-                        <input type="radio" id="opcao-3" name="question2">
-                        <label id="opcao8" for="opcao-3"></label>
-                    </span>
-
+                    
+                    <!-- Pergunta 1 -->
                     <article class="cartao">
-                        <h3 id="title3"> </h3>
-                        <input type="radio" id="opcao-9" name="question3">
-                        <label id="opcao9" for="opcao-9"></label><br>
+                        <h3 id="title1"></h3>
+                        <input type="radio" id="p1-op0" name="question1" value="0">
+                        <label id="opcao1" for="p1-op0"></label><br>
 
-                        <input type="radio" id="opcao-10" name="question3">
-                        <label id="opcao10" for="opcao-10"></label><br>
+                        <input type="radio" id="p1-op1" name="question1" value="1">
+                        <label id="opcao2" for="p1-op1"></label><br>
 
-                        <input type="radio" id="opcao-11" name="question3">
-                        <label id="opcao11" for="opcao-11"></label><br>
+                        <input type="radio" id="p1-op2" name="question1" value="2">
+                        <label id="opcao3" for="p1-op2"></label><br>
 
-                        <input type="radio" id="opcao-12" name="question3">
-                        <label id="opcao12" for="opcao-12"></label>
+                        <input type="radio" id="p1-op3" name="question1" value="3">
+                        <label id="opcao4" for="p1-op3"></label>
                     </article>
 
+                    <!-- Pergunta 2 -->
                     <article class="cartao">
-                        <h3 id="title4"> </h3>
-                        <input type="radio" id="opcao-13" name="question4">
-                        <label id="opcao13" for="opcao-13"></label><br>
+                        <h3 id="title2"></h3>
+                        <input type="radio" id="p2-op0" name="question2" value="0">
+                        <label id="opcao5" for="p2-op0"></label><br>
 
-                        <input type="radio" id="opcao-14" name="question4">
-                        <label id="opcao14" for="opcao-14"></label><br>
+                        <input type="radio" id="p2-op1" name="question2" value="1">
+                        <label id="opcao6" for="p2-op1"></label><br>
 
-                        <input type="radio" id="opcao-15" name="question4">
-                        <label id="opcao15" for="opcao-15"></label><br>
+                        <input type="radio" id="p2-op2" name="question2" value="2">
+                        <label id="opcao7" for="p2-op2"></label><br>
 
-                        <input type="radio" id="opcao-16" name="question4">
-                        <label id="opcao16" for="opcao-16"></label>
+                        <input type="radio" id="p2-op3" name="question2" value="3">
+                        <label id="opcao8" for="p2-op3"></label>
                     </article>
 
+                    <!-- Pergunta 3 -->
                     <article class="cartao">
-                        <h3 id="title5"> </h3>
-                        <input type="radio" id="opcao-17" name="question5">
-                        <label id="opcao17" for="opcao-17"></label><br>
+                        <h3 id="title3"></h3>
+                        <input type="radio" id="p3-op0" name="question3" value="0">
+                        <label id="opcao9" for="p3-op0"></label><br>
 
-                        <input type="radio" id="opcao-18" name="question5">
-                        <label id="opcao18" for="opcao-18"></label><br>
+                        <input type="radio" id="p3-op1" name="question3" value="1">
+                        <label id="opcao10" for="p3-op1"></label><br>
 
-                        <input type="radio" id="opcao-19" name="question5">
-                        <label id="opcao19" for="opcao-19"></label><br>
+                        <input type="radio" id="p3-op2" name="question3" value="2">
+                        <label id="opcao11" for="p3-op2"></label><br>
 
-                        <input type="radio" id="opcao-20" name="question5">
-                        <label id="opcao20" for="opcao-20"></label>
+                        <input type="radio" id="p3-op3" name="question3" value="3">
+                        <label id="opcao12" for="p3-op3"></label>
                     </article>
 
+                    <!-- Pergunta 4 -->
                     <article class="cartao">
-                        <h3 id="title6"> </h3>
-                        <input type="radio" id="opcao-21" name="question6">
-                        <label id="opcao21" for="opcao-21"></label><br>
+                        <h3 id="title4"></h3>
+                        <input type="radio" id="p4-op0" name="question4" value="0">
+                        <label id="opcao13" for="p4-op0"></label><br>
 
-                        <input type="radio" id="opcao-22" name="question6">
-                        <label id="opcao22" for="opcao-22"></label><br>
+                        <input type="radio" id="p4-op1" name="question4" value="1">
+                        <label id="opcao14" for="p4-op1"></label><br>
 
-                        <input type="radio" id="opcao-23" name="question6">
-                        <label id="opcao23" for="opcao-23"></label><br>
+                        <input type="radio" id="p4-op2" name="question4" value="2">
+                        <label id="opcao15" for="p4-op2"></label><br>
 
-                        <input type="radio" id="opcao-24" name="question6">
-                        <label id="opcao24" for="opcao-24"></label>
+                        <input type="radio" id="p4-op3" name="question4" value="3">
+                        <label id="opcao16" for="p4-op3"></label>
                     </article>
 
+                    <!-- Pergunta 5 -->
                     <article class="cartao">
-                        <h3 id="title7"> </h3>
-                        <input type="radio" id="opcao-25" name="question7">
-                        <label id="opcao25" for="opcao-25"></label><br>
+                        <h3 id="title5"></h3>
+                        <input type="radio" id="p5-op0" name="question5" value="0">
+                        <label id="opcao17" for="p5-op0"></label><br>
 
-                        <input type="radio" id="opcao-26" name="question7">
-                        <label id="opcao26" for="opcao-26"></label><br>
+                        <input type="radio" id="p5-op1" name="question5" value="1">
+                        <label id="opcao18" for="p5-op1"></label><br>
 
-                        <input type="radio" id="opcao-27" name="question7">
-                        <label id="opcao27" for="opcao-27"></label><br>
+                        <input type="radio" id="p5-op2" name="question5" value="2">
+                        <label id="opcao19" for="p5-op2"></label><br>
 
-                        <input type="radio" id="opcao-28" name="question7">
-                        <label id="opcao28" for="opcao-28"></label>
+                        <input type="radio" id="p5-op3" name="question5" value="3">
+                        <label id="opcao20" for="p5-op3"></label>
                     </article>
 
+                    <!-- Pergunta 6 -->
                     <article class="cartao">
-                        <h3 id="title8"> </h3>
-                        <input type="radio" id="opcao-29" name="question8">
-                        <label id="opcao29" for="opcao-29"></label><br>
+                        <h3 id="title6"></h3>
+                        <input type="radio" id="p6-op0" name="question6" value="0">
+                        <label id="opcao21" for="p6-op0"></label><br>
 
-                        <input type="radio" id="opcao-30" name="question8">
-                        <label id="opcao30" for="opcao-30"></label><br>
+                        <input type="radio" id="p6-op1" name="question6" value="1">
+                        <label id="opcao22" for="p6-op1"></label><br>
 
-                        <input type="radio" id="opcao-31" name="question8">
-                        <label id="opcao31" for="opcao-31"></label><br>
+                        <input type="radio" id="p6-op2" name="question6" value="2">
+                        <label id="opcao23" for="p6-op2"></label><br>
 
-                        <input type="radio" id="opcao-32" name="question8">
-                        <label id="opcao32" for="opcao-32"></label>
+                        <input type="radio" id="p6-op3" name="question6" value="3">
+                        <label id="opcao24" for="p6-op3"></label>
                     </article>
 
+                    <!-- Pergunta 7 -->
                     <article class="cartao">
-                        <h3 id="title9"> </h3>
-                        <input type="radio" id="opcao-33" name="question9">
-                        <label id="opcao33" for="opcao-33"></label><br>
+                        <h3 id="title7"></h3>
+                        <input type="radio" id="p7-op0" name="question7" value="0">
+                        <label id="opcao25" for="p7-op0"></label><br>
 
-                        <input type="radio" id="opcao-34" name="question9">
-                        <label id="opcao34" for="opcao-34"></label><br>
+                        <input type="radio" id="p7-op1" name="question7" value="1">
+                        <label id="opcao26" for="p7-op1"></label><br>
 
-                        <input type="radio" id="opcao-35" name="question9">
-                        <label id="opcao35" for="opcao-35"></label><br>
+                        <input type="radio" id="p7-op2" name="question7" value="2">
+                        <label id="opcao27" for="p7-op2"></label><br>
 
-                        <input type="radio" id="opcao-36" name="question9">
-                        <label id="opcao36" for="opcao-36"></label>
+                        <input type="radio" id="p7-op3" name="question7" value="3">
+                        <label id="opcao28" for="p7-op3"></label>
                     </article>
 
+                    <!-- Pergunta 8 -->
                     <article class="cartao">
-                        <h3 id="title10"> </h3>
-                        <input type="radio" id="opcao-37" name="question10">
-                        <label id="opcao37" for="opcao-37"></label><br>
+                        <h3 id="title8"></h3>
+                        <input type="radio" id="p8-op0" name="question8" value="0">
+                        <label id="opcao29" for="p8-op0"></label><br>
 
-                        <input type="radio" id="opcao-38" name="question10">
-                        <label id="opcao38" for="opcao-38"></label><br>
+                        <input type="radio" id="p8-op1" name="question8" value="1">
+                        <label id="opcao30" for="p8-op1"></label><br>
 
-                        <input type="radio" id="opcao-39" name="question10">
-                        <label id="opcao39" for="opcao-39"></label><br>
+                        <input type="radio" id="p8-op2" name="question8" value="2">
+                        <label id="opcao31" for="p8-op2"></label><br>
 
-                        <input type="radio" id="opcao-40" name="question10">
-                        <label id="opcao40" for="opcao-40"></label>
+                        <input type="radio" id="p8-op3" name="question8" value="3">
+                        <label id="opcao32" for="p8-op3"></label>
                     </article>
+
+                    <!-- Pergunta 9 -->
+                    <article class="cartao">
+                        <h3 id="title9"></h3>
+                        <input type="radio" id="p9-op0" name="question9" value="0">
+                        <label id="opcao33" for="p9-op0"></label><br>
+
+                        <input type="radio" id="p9-op1" name="question9" value="1">
+                        <label id="opcao34" for="p9-op1"></label><br>
+
+                        <input type="radio" id="p9-op2" name="question9" value="2">
+                        <label id="opcao35" for="p9-op2"></label><br>
+
+                        <input type="radio" id="p9-op3" name="question9" value="3">
+                        <label id="opcao36" for="p9-op3"></label>
+                    </article>
+
+                    <!-- Pergunta 10 -->
+                    <article class="cartao">
+                        <h3 id="title10"></h3>
+                        <input type="radio" id="p10-op0" name="question10" value="0">
+                        <label id="opcao37" for="p10-op0"></label><br>
+
+                        <input type="radio" id="p10-op1" name="question10" value="1">
+                        <label id="opcao38" for="p10-op1"></label><br>
+
+                        <input type="radio" id="p10-op2" name="question10" value="2">
+                        <label id="opcao39" for="p10-op2"></label><br>
+
+                        <input type="radio" id="p10-op3" name="question10" value="3">
+                        <label id="opcao40" for="p10-op3"></label>
+                    </article>
+
                     <br>
                 </div>
             </div>
