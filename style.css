@@ -1,4 +1,4 @@
- :root {
+:root {
       --cor: #b45309;
       --sobre-cor: #ffffff;
       --link: #19421e;
@@ -98,7 +98,7 @@
     }
 
     .cartao {
-      border: 1px solid #3b6b41;
+      border: 2px solid darkslategrey;
       border-radius: 12px;
       padding: 20px;
     }
@@ -121,79 +121,24 @@
       display: none;
     }
 
-    .button {
-      background-color: transparent;
-      border-radius: 10px;
-      border: none;
-      color: rgb(131, 100, 14);
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      cursor: pointer;
-      width: 39rem;
-    }
-
-    .button1 {
-      border: 2px solid #946745;
-    }
-
-    .button2 {
-      border: 2px solid #8d4b18;
-    }
 
 
-    .button {
-      position: relative;
-      display: inline-block;
-      margin: 20px;
-    }
+    .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
 
-    .button a {
-      color: white;
-      font-family: Helvetica, sans-serif;
-      font-weight: bold;
-      font-size: 36px;
-      text-align: center;
-      text-decoration: none;
-      background-color: #059600;
-      display: block;
-      position: relative;
-      padding: 20px 40px;
-
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-      text-shadow: 0px 1px 0px #000;
-      filter: dropshadow(color=#000, offx=0px, offy=1px);
-
-      -webkit-box-shadow: inset 0 1px 0 #c4ffd6, 0 10px 0 #005f37;
-      -moz-box-shadow: inset 0 1px 0 #c4ffd6, 0 10px 0 #005f37;
-      box-shadow: inset 0 1px 0 #c4ffd6, 0 10px 0 #005f37;
-
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-    }
-
-    .button a:active {
-      top: 10px;
-      background-color: #1a8a52;
-
-      -webkit-box-shadow: inset 0 1px 0 #c4ffdd, inset 0 -3px 0 #004229;
-      -moz-box-shadow: inset 0 1px 0 #c4ffdd, inset 0 -3pxpx 0 #004229;
-      box-shadow: inset 0 1px 0 #c4ffdd, inset 0 -3px 0 #004229;
-    }
-
-    .button:after {
-      content: "";
-      height: 100%;
-      width: 100%;
-      padding: 4px;
-      position: absolute;
-      bottom: -15px;
-      left: -4px;
-      z-index: -1;
-      background-color: #002b09;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-    }
+.btn-start {
+    background-color: #059600;
+    color: #ffffff;           
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 50px;       
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(5, 150, 0, 0.3);
+}
