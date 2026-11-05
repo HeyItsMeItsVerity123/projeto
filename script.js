@@ -25,9 +25,9 @@ function buildQuestion() {        //escreve as perguntas depois de clicar no bot
 
         for (let j = 0; j < 4; j++) {
             let idLabel = (i * 4) + j + 1;
-            const op = document.getElementById("opcao" + idLabel);
-            if (op) {
-                op.textContent = questoes[i].opcoes[j];
+            const op = document.getElementById("opcao" + idLabel); //é meio confuso, a label dos index estao registrados como "opcao",todas, esse for percorre as labels e vai escrevendo as perguntas no codigo abaixo:
+            if (op) {                                                         //ex: opcao + 1 = opcao1
+                op.textContent = questoes[i].opcoes[j]; //nesse, aqui começa a escrever as perguntas, pegando direto o numero e o que ta escrito pelo objeto
             }
         }
     }
@@ -35,35 +35,32 @@ function buildQuestion() {        //escreve as perguntas depois de clicar no bot
 
 function finalizarJogo() {
     const questoes = quiz_data.futebol.questions;
-    const totalPerguntas = Object.keys(questoes).length; // Usando Object.keys() como pedido!
     let acertos = 0;
 
-    // Verifica cada pergunta de 1 a 10
-    for (let i = 0; i < totalPerguntas; i++) {
+    for (let i = 0; i < questoes.length; i++) {         
         let numeroPergunta = i + 1;
         
-        // Procura o rádio marcado na pergunta atual (ex: question1, question2...)
-        const radioMarcado = document.querySelector(`input[name="question${numeroPergunta}"]:checked`);
-
+        const radioMarcado = document.querySelector(`input[name="question${numeroPergunta}"]:checked`); //ve se os radio estao todos marcados, se nao estiver:
+//aparece esse aviso:
         if (!radioMarcado) {
             alert(`OPS! Você precisa responder todas as perguntas. A pergunta ${numeroPergunta} ficou em branco.`);
-            return; // Para a execução se faltar alguma
+            return; 
         }
 
-        // Pega o valor (value) do rádio que foi marcado (0, 1, 2 ou 3)
+
+        //todos os radios tem um valor de 0 a 3, esta linha faz com que esses valores se tornem um numero inteiro que o js consiga usar para fazer operações
         const indiceEscolhido = parseInt(radioMarcado.value);
 
-        // Compara com a resposta correta do quiz_data
-        if (indiceEscolhido === questoes[i].correto) {
+        //o questoes[i] percorre todas as perguntas no objeto de perguntas
+        if (indiceEscolhido === questoes[i].correto) {      //aqui ele compara se o que o usuario escolheu está registrado como resposta certa no onjeto
             acertos++;
         }
     }
 
-    // Se todas foram respondidas, mostra o alert com o resultado final
-    alert(`Fim de jogo! Você acertou ${acertos} de ${totalPerguntas} perguntas.`);
+    alert(`Fim de jogo! Você acertou ${acertos} de ${questoes.length} perguntas.`);
 }
 
-const quiz_data = {  //lista de perguntas em um objeto 
+const quiz_data = { 
     futebol: {
         titulo: 'futebol',
         questions: [
