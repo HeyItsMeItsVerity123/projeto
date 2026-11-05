@@ -24,7 +24,7 @@
         </section>
         
       <div class="button-container">
-    <button class="btn-start" onclick="mudarEstado('sectionPerguntas')">
+    <button class="btn-startEfinish" onclick="mudarEstado('sectionPerguntas')">
         Começar o quiz!
     </button>
 </div>
@@ -62,7 +62,7 @@
                         <label id="opcao8" for="opcao-3"></label>
                     </div>
 
-                    <div class="cartao">
+                    <div class="cartao" onclick="pegaClickGamer('question3')">
                         <h3 id="title3"> </h3>
                         <input type="radio" id="opcao-9" name="question3">
                         <label id="opcao9" for="opcao-9"></label><br>
@@ -77,7 +77,7 @@
                         <label id="opcao12" for="opcao-12"></label>
                     </div>
 
-                    <div class="cartao">
+                    <div class="cartao" onclick="pegaClickGamer('question4')">
                         <h3 id="title4"> </h3>
                         <input type="radio" id="opcao-13" name="question4">
                         <label id="opcao13" for="opcao-13"></label><br>
@@ -92,7 +92,7 @@
                         <label id="opcao16" for="opcao-16"></label>
                     </div>
 
-                    <div class="cartao">
+                    <div class="cartao" onclick="pegaClickGamer('question5')">
                         <h3 id="title5"> </h3>
                         <input type="radio" id="opcao-17" name="question5">
                         <label id="opcao17" for="opcao-17"></label><br>
@@ -107,7 +107,7 @@
                         <label id="opcao20" for="opcao-20"></label>
                     </div>
 
-                    <div class="cartao">
+                    <div class="cartao" onclick="pegaClickGamer('question6')">
                         <h3 id="title6"> </h3>
                         <input type="radio" id="opcao-21" name="question6">
                         <label id="opcao21" for="opcao-21"></label><br>
@@ -122,7 +122,7 @@
                         <label id="opcao24" for="opcao-24"></label>
                     </div>
 
-                    <div class="cartao">
+                    <div class="cartao" onclick="pegaClickGamer('question7')">
                         <h3 id="title7"> </h3>
                         <input type="radio" id="opcao-25" name="question7">
                         <label id="opcao25" for="opcao-25"></label><br>
@@ -137,7 +137,7 @@
                         <label id="opcao28" for="opcao-28"></label>
                     </div>
 
-                    <div class="cartao">
+                    <div class="cartao" onclick="pegaClickGamer('question8')">
                         <h3 id="title8"> </h3>
                         <input type="radio" id="opcao-29" name="question8">
                         <label id="opcao29" for="opcao-29"></label><br>
@@ -152,7 +152,7 @@
                         <label id="opcao32" for="opcao-32"></label>
                     </div>
 
-                    <div class="cartao">
+                    <div class="cartao" onclick="pegaClickGamer('question9')">
                         <h3 id="title9"> </h3>
                         <input type="radio" id="opcao-33" name="question9">
                         <label id="opcao33" for="opcao-33"></label><br>
@@ -167,7 +167,7 @@
                         <label id="opcao36" for="opcao-36"></label>
                     </div>
 
-                    <div class="cartao">
+                    <div class="cartao" onclick="pegaClickGamer('question10')">
                         <h3 id="title10"> </h3>
                         <input type="radio" id="opcao-37" name="question10">
                         <label id="opcao37" for="opcao-37"></label><br>
@@ -186,7 +186,7 @@
             </div>
 
             <div class="container">
-                <button onclick="finalizarJogo()">
+                <button class="btn-startEfinish" onclick="finalizarJogo()">
                     <b>TERMINAR o quiz!</b>
                 </button>
             </div>
