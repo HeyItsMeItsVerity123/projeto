@@ -1,5 +1,4 @@
-:root {
-      --cor: #b45309;
+ :root {
       --sobre-cor: #ffffff;
       --link: #19421e;
     }
@@ -11,7 +10,7 @@
     body {
 
       margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family: sans-serif;
       color: #1f2937;
       line-height: 1.6;
       background: #fcfafa;
@@ -108,6 +107,7 @@
       color: var(--link);
     }
 
+    /* Rodapé da página */
     footer {
       border-top: 1px solid #e5e7eb;
       padding: 24px 0;
@@ -121,49 +121,47 @@
       display: none;
     }
 
-
-
-    .button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0;
+/* CSS */
+.button-55 {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.btn-startEfinish {
-    background-color: #059600;
-    color: #ffffff;           
-    font-size: 1.5rem;
-    padding: 16px 40px;
-    border: none;
-    border-radius: 50px;       
-    cursor: pointer;
+.button-55:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
 }
-@media (max-width: 600px) {
 
-    .areaTitulo {
-        padding: 30px 0;
-    }
+.button-55:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
 
-    .areaTitulo h1 {
-        font-size: 1.8rem;
-    }
-
-    .container {
-        padding: 0 15px;
-    }
-
-    .cartao {
-        padding: 15px;
-    }
-
-    .button-container button {
-        font-size: 1rem;
-        padding: 12px 25px;
-    }
-
-    .grade {
-        grid-template-columns: 1fr;
-    }
-
+#newGameBtn {
+  display: none;
 }
