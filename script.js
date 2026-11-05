@@ -1,66 +1,273 @@
-function mostrarQuiz(){
-    console.log(quiz_data);
-}
-
-function mudarEstado(el) {  //essa é a função que faz o quiz aparecer, se na hora que a função ativar o display estiver bloqueado, o bloqueio sai e o quiz aparece. Vice-versa, se o quiz nao estiver com bloqueio na hora que a função ativa dnv, o bloqueio ativa e o quiz some
+// esconde o botão de iniciar e exibe as perguntas
+function mudarEstado(el) {
     var display = document.getElementById(el).style.display;
-    if(display == "block")
-        document.getElementById(el).style.display = 'none';
-    else
-        document.getElementById(el).style.display = 'block';
+    
+    // mostra as perguntas
+    if(display != "block") document.getElementById(el).style.display = 'block';
 
+    // esconde o botão inicial
+    document.getElementById('button-55').style.display = 'none';
     buildQuestion();
 }
   
-function buildQuestion() {        //escreve as perguntas depois de clicar no botão, o comando que faz essa função acontecer esta no final da que ativa quando clica no botao começar quiz          
-    const questoes = quiz_data.futebol.questions;
+// constroi todas a perguntas que serão mostradas
+function buildQuestion() {
+    const elemento = document.getElementById("title1");
+    elemento.textContent = quiz_data.futebol.questions[0].pergunta
 
-    for (let i = 0; i < questoes.length; i++) {
-        let num = i + 1;
-        
-        const elemento = document.getElementById("title" + num);
-        if (elemento) {
-            elemento.textContent = questoes[i].pergunta;
-        }
+    const p1op1 = document.getElementById("opcao1");
+    p1op1.textContent = quiz_data.futebol.questions[0].opcoes[0]
 
-        for (let j = 0; j < 4; j++) {
-            let idLabel = (i * 4) + j + 1;
-            const op = document.getElementById("opcao" + idLabel); //é meio confuso, a label dos index estao registrados como "opcao",todas, esse for percorre as labels e vai escrevendo as perguntas no codigo abaixo:
-            if (op) {                                                         //ex: opcao + 1 = opcao1
-                op.textContent = questoes[i].opcoes[j]; //nesse, aqui começa a escrever as perguntas, pegando direto o numero e o que ta escrito pelo objeto
-            }
-        }
+    const p1op2 = document.getElementById("opcao2");
+    p1op2.textContent = quiz_data.futebol.questions[0].opcoes[1]
+
+    const p1op3 = document.getElementById("opcao3");
+    p1op3.textContent = quiz_data.futebol.questions[0].opcoes[2]
+
+    const p1op4 = document.getElementById("opcao4");
+    p1op4.textContent = quiz_data.futebol.questions[0].opcoes[3]
+
+    // ------------------------------------------------------------ //
+
+    const elemento1 = document.getElementById("title2");
+    elemento1.textContent = quiz_data.futebol.questions[1].pergunta
+
+    const p2op1 = document.getElementById("opcao5");
+    p2op1.textContent = quiz_data.futebol.questions[1].opcoes[0]
+
+    const p2op2 = document.getElementById("opcao6");
+    p2op2.textContent = quiz_data.futebol.questions[1].opcoes[1]
+
+    const p2op3 = document.getElementById("opcao7");
+    p2op3.textContent = quiz_data.futebol.questions[1].opcoes[2]
+
+    const p2op4 = document.getElementById("opcao8");
+    p2op4.textContent = quiz_data.futebol.questions[1].opcoes[3]
+
+    //---------------------------------------------------------
+
+    const elemento2 = document.getElementById("title3");
+    elemento2.textContent = quiz_data.futebol.questions[2].pergunta
+
+    const p3op1 = document.getElementById("opcao9");
+    p3op1.textContent = quiz_data.futebol.questions[2].opcoes[0]
+
+    const p3op2 = document.getElementById("opcao10");
+    p3op2.textContent = quiz_data.futebol.questions[2].opcoes[1]
+
+    const p3op3 = document.getElementById("opcao11");
+    p3op3.textContent = quiz_data.futebol.questions[2].opcoes[2]
+
+    const p3op4 = document.getElementById("opcao12");
+    p3op4.textContent = quiz_data.futebol.questions[2].opcoes[3]
+
+    // ------------------------------------------------------------ //
+
+    const elemento3 = document.getElementById("title4");
+    elemento3.textContent = quiz_data.futebol.questions[3].pergunta
+
+    const p4op1 = document.getElementById("opcao13");
+    p4op1.textContent = quiz_data.futebol.questions[3].opcoes[0]
+
+    const p4op2 = document.getElementById("opcao14");
+    p4op2.textContent = quiz_data.futebol.questions[3].opcoes[1]
+
+    const p4op3 = document.getElementById("opcao15");
+    p4op3.textContent = quiz_data.futebol.questions[3].opcoes[2]
+
+    const p4op4 = document.getElementById("opcao16");
+    p4op4.textContent = quiz_data.futebol.questions[3].opcoes[3]
+
+    // ------------------------------------------------------------ //
+
+    const elemento4 = document.getElementById("title5");
+    elemento4.textContent = quiz_data.futebol.questions[4].pergunta
+
+    const p5op1 = document.getElementById("opcao17");
+    p5op1.textContent = quiz_data.futebol.questions[4].opcoes[0]
+
+    const p5op2 = document.getElementById("opcao18");
+    p5op2.textContent = quiz_data.futebol.questions[4].opcoes[1]
+
+    const p5op3 = document.getElementById("opcao19");
+    p5op3.textContent = quiz_data.futebol.questions[4].opcoes[2]
+
+    const p5op4 = document.getElementById("opcao20");
+    p5op4.textContent = quiz_data.futebol.questions[4].opcoes[3]
+
+    // ------------------------------------------------------------ //
+
+    const elemento5 = document.getElementById("title6");
+    elemento5.textContent = quiz_data.futebol.questions[5].pergunta
+
+    const p6op1 = document.getElementById("opcao21");
+    p6op1.textContent = quiz_data.futebol.questions[5].opcoes[0]
+
+    const p6op2 = document.getElementById("opcao22");
+    p6op2.textContent = quiz_data.futebol.questions[5].opcoes[1]
+
+    const p6op3 = document.getElementById("opcao23");
+    p6op3.textContent = quiz_data.futebol.questions[5].opcoes[2]
+
+    const p6op4 = document.getElementById("opcao24");
+    p6op4.textContent = quiz_data.futebol.questions[5].opcoes[3]
+
+    // ------------------------------------------------------------ //
+
+    const elemento6 = document.getElementById("title7");
+    elemento6.textContent = quiz_data.futebol.questions[6].pergunta
+
+    const p7op1 = document.getElementById("opcao25");
+    p7op1.textContent = quiz_data.futebol.questions[6].opcoes[0]
+
+    const p7op2 = document.getElementById("opcao26");
+    p7op2.textContent = quiz_data.futebol.questions[6].opcoes[1]
+
+    const p7op3 = document.getElementById("opcao27");
+    p7op3.textContent = quiz_data.futebol.questions[6].opcoes[2]
+
+    const p7op4 = document.getElementById("opcao28");
+    p7op4.textContent = quiz_data.futebol.questions[6].opcoes[3]
+
+    // ------------------------------------------------------------ //
+
+    const elemento7 = document.getElementById("title8");
+    elemento7.textContent = quiz_data.futebol.questions[7].pergunta
+
+    const p8op1 = document.getElementById("opcao29");
+    p8op1.textContent = quiz_data.futebol.questions[7].opcoes[0]
+
+    const p8op2 = document.getElementById("opcao30");
+    p8op2.textContent = quiz_data.futebol.questions[7].opcoes[1]
+
+    const p8op3 = document.getElementById("opcao31");
+    p8op3.textContent = quiz_data.futebol.questions[7].opcoes[2]
+
+    const p8op4 = document.getElementById("opcao32");
+    p8op4.textContent = quiz_data.futebol.questions[7].opcoes[3]
+
+    // ------------------------------------------------------------ //
+
+    const elemento8 = document.getElementById("title9");
+    elemento8.textContent = quiz_data.futebol.questions[8].pergunta
+
+    const p9op1 = document.getElementById("opcao33");
+    p9op1.textContent = quiz_data.futebol.questions[8].opcoes[0]
+
+    const p9op2 = document.getElementById("opcao34");
+    p9op2.textContent = quiz_data.futebol.questions[8].opcoes[1]
+
+    const p9op3 = document.getElementById("opcao35");
+    p9op3.textContent = quiz_data.futebol.questions[8].opcoes[2]
+
+    const p9op4 = document.getElementById("opcao36");
+    p9op4.textContent = quiz_data.futebol.questions[8].opcoes[3]
+
+    // ------------------------------------------------------------ //
+
+    const elemento9 = document.getElementById("title10");
+    elemento9.textContent = quiz_data.futebol.questions[9].pergunta
+
+    const p10op1 = document.getElementById("opcao37");
+    p10op1.textContent = quiz_data.futebol.questions[9].opcoes[0]
+
+    const p10op2 = document.getElementById("opcao38");
+    p10op2.textContent = quiz_data.futebol.questions[9].opcoes[1]
+
+    const p10op3 = document.getElementById("opcao39");
+    p10op3.textContent = quiz_data.futebol.questions[9].opcoes[2]
+
+    const p10op4 = document.getElementById("opcao40");
+    p10op4.textContent = quiz_data.futebol.questions[9].opcoes[3]
+
+    // ------------------------------------------------------------ //
+}
+
+function verificarRadioSelecionado(nameInput) {
+  const newQuery = 'input[name="' + nameInput + '"]';
+  const radios = document.querySelectorAll(newQuery);
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      return radio.id; // retorna o id do rádio selecionado
     }
+  }
+  return null; // se nenhum estiver selecionado
+}
+
+function pegaClickGamer(nameInput) {
+    const selecionado = verificarRadioSelecionado(nameInput);
+    const position = nameInput.slice(-2)-1;
+
+    if (selecionado) {
+        respGamer[parseInt(position)] = selecionado.split('-')[1];
+    }
+}
+
+function novoJogo() {
+    // desliza a tela para o topo
+    window.scrollTo({top:0, behavior: 'smooth'});
+    
+    //
+    
+    // atualiza a tela (F5), em 1segundo
+    setTimeout(() => window.location.href = window.location.href, 1000);
 }
 
 function finalizarJogo() {
-    const questoes = quiz_data.futebol.questions;
-    let acertos = 0;
-
-    for (let i = 0; i < questoes.length; i++) {         
-        let numeroPergunta = i + 1;
-        
-        const radioMarcado = document.querySelector(`input[name="question${numeroPergunta}"]:checked`); //ve se os radio estao todos marcados, se nao estiver:
-//aparece esse aviso:
-        if (!radioMarcado) {
-            alert(`OPS! Você precisa responder todas as perguntas. A pergunta ${numeroPergunta} ficou em branco.`);
-            return; 
-        }
-
-
-        //todos os radios tem um valor de 0 a 3, esta linha faz com que esses valores se tornem um numero inteiro que o js consiga usar para fazer operações
-        const indiceEscolhido = parseInt(radioMarcado.value);
-
-        //o questoes[i] percorre todas as perguntas no objeto de perguntas
-        if (indiceEscolhido === questoes[i].correto) {      //aqui ele compara se o que o usuario escolheu está registrado como resposta certa no onjeto
-            acertos++;
-        }
+    let cont = 0;
+    for(const resp of respGamer) if(resp < 0) cont++;
+    
+    if(respGamer.find((element) => element < 0)) {        
+        alert('OPS! vc precisa responder todas as perguntas \n respostas faltantes: ' + cont ); 
+    } else {             
+        analisaRespostas();         
     }
-
-    alert(`Fim de jogo! Você acertou ${acertos} de ${questoes.length} perguntas.`);
 }
 
-const quiz_data = { 
+function analisaRespostas() {
+    let acertos = 0;
+    let auxTexto = '';
+    let idQuestion = '';    
+
+    for (let index = 0; index < 10; index++) {
+        if(index == 9) idQuestion = 'question10'
+        else idQuestion = 'question0' + (index+1);
+
+        const el = document.getElementById(idQuestion);
+        const a = respCertas[index];
+        const b = parseInt(respGamer[index]);
+        
+        if(a === b) {            
+            acertos++;    
+            // muda a cor da borda da div para verde se ele acertou
+            el.style.borderColor = 'green'; 
+        } else {
+            // muda a cor da borda da div para vermelho se ele errou
+            el.style.borderColor = 'red';
+        } 
+    }
+
+    if(acertos <= 6) {
+        auxTexto = '⚽ Seu merda, Estude mais!'
+    }else if(acertos > 6 && acertos < 9) {
+        auxTexto = '⚽ Boa, mas dá para melhorar!' 
+    }else if(acertos === 9) {
+        auxTexto = '⚽ Quase viado, bateu na trave!'
+    }else {
+        auxTexto = '** 🏆  Tu é o bichão mesmo!  🏆 **'
+    }
+
+    alert('você acertou ' + acertos + ' de 10 perguntas! \n' + auxTexto + '\nFim de jogo!');
+    
+    document.getElementById('newGameBtn').style.display = 'block'; // exibe botão de novo jogo
+    document.getElementById('finishGameBtn').style.display = 'none'; // esconde botão finalizar jogo    
+}
+
+const respCertas = [1,3,2,1,2,0,2,1,2,2];
+var respGamer = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1];
+
+const quiz_data = {
     futebol: {
         titulo: 'futebol',
         questions: [
@@ -115,7 +322,6 @@ const quiz_data = {
                 correto: 2
             }
         ]
-    }
-};
-
-mostrarQuiz();
+    },
+    
+}
