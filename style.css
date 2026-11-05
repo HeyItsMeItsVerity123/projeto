@@ -134,11 +134,9 @@
     background-color: #059600;
     color: #ffffff;           
     font-size: 1.5rem;
-    font-weight: bold;
     padding: 16px 40px;
     border: none;
     border-radius: 50px;       
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 12px rgba(5, 150, 0, 0.3);
 }
