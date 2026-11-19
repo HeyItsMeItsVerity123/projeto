@@ -16,10 +16,6 @@
       background: #ffffff;
     }
 
-    a {
-      color: var(--link);
-    }
-
     .container {
       max-width: 960px;
       margin: 0 auto;
@@ -27,7 +23,7 @@
     }
 
     header {
-      border-bottom: 1px solid #fcfcfc;
+      border-bottom: 1px solid #ffffff;
     }
 
     header .container {
@@ -40,19 +36,6 @@
       padding-bottom: 14px;
     }
 
-    .marca {
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: #111827;
-      text-decoration: none;
-    }
-
-    nav a {
-      margin-left: 16px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
     .areaTitulo {
       padding: 64px 0;
       background: #feffff;
@@ -62,23 +45,7 @@
     .destaque h1 {
       font-size: clamp(1.8rem, 5vw, 2.6rem);
       margin: 0 0 12px;
-      color: #111827;
-    }
-
-    .destaque p {
-      font-size: 1.15rem;
-      margin: 0 0 24px;
-      color: #374151;
-    }
-
-    .botao {
-      display: inline-block;
-      background: var(--cor);
-      color: var(--sobre-cor);
-      padding: 14px 28px;
-      border-radius: 999px;
-      font-weight: 700;
-      text-decoration: none;
+      color: #fefefe;
     }
 
     section {
@@ -120,7 +87,7 @@
       display: none;
     }
 
-/* botao ininciar */
+/* botao ddefault */
 .button-55 {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
